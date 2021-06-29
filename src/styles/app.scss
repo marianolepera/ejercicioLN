@@ -1,0 +1,186 @@
+@import "../fonts/fonts.css";
+@import "mediaqueries.scss";
+//@import "~bootstrap/scss/bootstrap";
+
+//variables
+$fondo: #006998;
+$sueca: suecaslab-medium;
+$fuente: #0074C4;
+
+//navbar
+.nav{   
+    background: rgb(255, 254, 254);
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_tabletmobile{
+        display: none;
+    }
+    &_titulo{
+        align-items: center;
+        display: flex;
+        
+        &_h1{
+            font-family: $sueca;
+            color: $fondo;
+            font-size: 2.4rem;
+        }
+        
+
+    }
+    &_leftsection{
+        padding-left: 5rem;
+        &_boton{
+            height: 2rem;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 16px;
+            font-size: 12px;
+        }
+    }
+
+    &_rightsection{
+        padding-right: 5rem;
+        &_botonamarillo{
+            height: 2rem;
+            background: #FFFF24;
+        }
+        &_botoningresar{
+            height: 2rem;
+            color: $fuente;
+            background:white;
+        }
+    }
+
+    @include tablet {
+        &_titulo{
+            &_h1{
+                font-size: 1.4rem;
+            }
+        }
+        &_tabletmobile{
+            display: block;
+            &_botonsubs{
+            background: transparent;
+            border-color: transparent;
+            padding: .1875rem 1rem;
+            color: #0074c4;
+            } 
+        }
+        &_leftsection{
+            display: none;
+        }
+        &_rightsection{
+            display: none;
+        }
+    }
+    @include mobile {
+        &_leftsection{
+            display: none;
+        }
+        &_tabletmobile{
+            display: block;
+            &_botonsubs{
+                display: none;
+            }
+        }
+        &_rightsection{
+            display: none;
+        }
+    }
+}
+
+//subnavbar
+.subnav{
+    background: #F2F2F2;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_dolar{
+        font-size: 0.875rem;
+        padding-left: 5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        &_nombredolar{
+            color: $fuente;
+        }
+    }
+
+    &_weather{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_newsletters{
+        color: $fuente;
+    }
+
+    &_beneficios{
+        padding-right: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        &_nombre{
+            color:$fuente;
+        }
+    }
+
+
+    @include tablet{
+        .subnav{
+            background:white;
+        }
+        &_dolar{
+            font-size: 0.70rem;
+            padding-left: 0px;
+        }
+        &_weather{
+            display: none;
+        }
+        &_newsletters{
+            display: none;
+        }
+        &_beneficios{
+            padding-right: 10px;
+        }
+    }
+
+    @include mobile{
+        .subnav{
+            background:white;
+        }
+        &_dolar{
+            padding-left: 0px;
+        }
+        &_weather{
+            display: none;
+        }
+        &_newsletters{
+            display: none;
+        }
+        &_beneficios{
+            display: none;
+        }
+    
+    }
+
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+//HEADER
+@mixin tablet {
+    @media screen and (min-width: 481px) and (max-width:1025px) {
+        @content;
+    }
+    
+}
+
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+    
+}
+

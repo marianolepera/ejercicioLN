@@ -1,0 +1,250 @@
+@import "../fonts/fonts.css";
+@import "mediaqueries.scss";
+$suecalab: suecaslab-medium;
+$sueca: suecaslab;
+
+
+.titulo{
+    position: static;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    font-family: $sueca;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    color: black;
+}
+
+.cuerpo{
+    margin-left: 5rem;
+    margin-top: 2rem;
+    .separadorHorizontal{
+        position: relative;
+        width: 950px;
+        height: 1px;
+        left: 0px;
+        top: -65px;
+        background: #CCCCCC;
+    }
+    @include tablet{
+        .separadorHorizontal{
+            width: 768px;
+        }
+    }
+    
+    @include mobile{
+        .separadorHorizontal{
+            width: 320px;
+        }
+    }
+    
+    
+    
+    .focalDerecho{
+        display: grid;
+        grid-template-columns: repeat(3,20rem);
+        width: 920px;
+        height: 567px;
+        &_articulo1{
+            width: 280px;
+            height: 392px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                h3{
+                    position: static;
+                    left: 0%;
+                    right: 0%;
+                    top: 0%;
+                    bottom: 38.78%;
+                    font-family: $sueca;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 32px;
+                    line-height: 40px;
+                    letter-spacing: -0.4px;
+                    flex: none;
+                    order: 0;
+                    align-self: stretch;
+                    flex-grow: 0;
+                    margin: 0px 0px 10px;
+                }
+                p{
+                    position: static;
+                    left: 0%;
+                    right: 0%;
+                    top: 63.27%;
+                    bottom: 6.12%;
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #333333;
+                    flex: none;
+                    order: 1;
+                    align-self: stretch;
+                    flex-grow: 0;
+                    margin: 8px 0px;
+                }
+            
+        }
+        &_separadorVertical{
+            position: relative;
+            width: 0px;
+            height: 477.33px;
+            right: 340px;
+            top: 0px;
+            border: 1px solid #CCCCCC;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+        &_articulo2{
+            width: 560px;
+            height: 104px;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            h3{
+                position: static;
+                left: 0%;
+                right: 0%;
+                top: 7.69%;
+                bottom: 30.77%;
+    
+    
+                font-family: $sueca;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 32px;
+    
+                letter-spacing: -0.4px;
+                flex: none;
+                order: 0;
+                align-self: stretch;
+                flex-grow: 0;
+            }
+            p{
+                
+                position: static;
+                left: 0%;
+                right: 0%;
+                top: 0%;
+                bottom: 0%;
+    
+                /* Arial/4XS - Bold */
+    
+                font-family: Arial;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 24px;
+                /* identical to box height, or 114% */
+    
+    
+                /* light/neutral/800 */
+    
+                color: #272727;
+    
+    
+                /* Inside Auto Layout */
+    
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                margin: 10px 0px;
+            }
+        }
+    
+        @include tablet{
+            width: 726px;
+            //height: 425px;
+            &_articulo1{
+                width: 235px;
+                height: 392px;
+            }
+            &_articulo2{
+                width: 469px;
+                height: 359px;
+                img{
+                    width: 448px;
+                }
+            }
+           
+        }
+    
+        @include mobile{
+            grid-template-columns: repeat(1,20rem);
+            padding-left: 0rem;
+            width: 320px;
+            height: 884px;
+            &_articulo1{
+                width: 320px;
+                height: 360px;
+                position: relative;
+                h3{
+                font-size: 18px;
+                font-family: $suecalab;
+                font-style: normal;
+                font-weight:lighter;
+                letter-spacing: -0.2px;
+                margin: 0px 10px;
+                }
+                p{
+                    margin: 0px 10px 4px;
+                }
+            }
+            &_articulo2{
+                width: 320px;
+                height: 500px;
+                position: relative;
+                img{
+                    width: 320px;
+                }
+                p{
+                   
+                    
+                    align-self: stretch;
+                    flex-grow: 0;
+                    margin: 0px 10px 4px;
+                }
+                h3{
+                font-size: 18px;
+                font-family: $suecalab;
+                font-style: normal;
+                font-weight:lighter;
+                letter-spacing: -0.2px;
+                margin: 0px 10px;
+                }
+            }
+            &_separadorVertical{
+                display: none;
+            }
+            .separadorHorizontal{
+                width: 320px;
+            }
+        }
+    
+    }
+}
+
+@include tablet{
+    .cuerpo{
+        margin-left: 0.8rem;
+    }
+}
+
+@include mobile{
+    .cuerpo{
+        margin-left: 0rem;
+    }
+}

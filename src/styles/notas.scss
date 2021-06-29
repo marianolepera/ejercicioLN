@@ -1,0 +1,173 @@
+@import "../fonts/fonts.css";
+@import "mediaqueries.scss";
+$suecalab: suecaslab-medium;
+$sueca: suecaslab;
+
+.titulo{
+    position: relative;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    font-family: $sueca;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    color: black;
+}
+
+
+.cuerpo{
+    margin-left: 5rem;
+    //margin-top: 2rem;
+    .separadorHorizontal{
+        position: relative;
+        width: 950px;
+        height: 1px;
+        left: 0px;
+        top: -65px;
+        background: #CCCCCC;
+    }
+    @include tablet{
+        .separadorHorizontal{
+            width: 768px;
+        }
+    }
+    
+    @include mobile{
+        .separadorHorizontal{
+            width: 320px;
+        }
+    }
+    
+    
+    
+    .notasColor{
+        display: grid;
+        grid-template-columns: repeat(3,20rem);
+        width: 920px;
+        //height: 480px;
+        &_articulo1{
+            width: 300px;
+            // height: 468px;
+               
+                a{
+                    text-decoration: none;
+                    //color: black;
+                }
+                h3{
+                   
+                    
+                    /* Global/XS - Medium */
+                    
+                    font-family: $suecalab;
+                    font-style: normal;
+                    font-weight: lighter;
+                    font-size: 16px;
+                    line-height: 26px;
+                    /* or 144% */
+                    
+                    letter-spacing: -0.2px;
+                    
+                    /* dark/neutral/900 */
+                    
+                    color: #FFFFFF;
+                    
+                    
+                    /* Inside Auto Layout */
+                    
+                    margin: -4px 0px;
+                }
+                p{
+                    position: static;
+                    left: 0%;
+                    right: 0%;
+                    top: 0%;
+                    bottom: 0%;
+                    
+                    /* Arial/4XS - Bold */
+                    
+                    font-family: Arial;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 16px;
+                    /* identical to box height, or 114% */
+                    
+                    
+                    /* dark/neutral/800 */
+                    
+                    color: #F2F2F2;
+                    
+                    
+                   
+                    margin: 10px 0px;
+                }
+            
+        }
+        
+      
+    
+        @include tablet{
+            width: 726px;
+            //height: 425px;
+            &_articulo1{
+                width: 235px;
+                height: 392px;
+                img{
+                    width: 235px;
+                }
+                p{
+                //padding-left: 0.8rem;
+                font-size: 0.8rem;
+            }
+            }
+           
+           
+        }
+    
+        @include mobile{
+            grid-template-columns: repeat(1,20rem);
+            padding-left: 0rem;
+            width: 320px;
+            //height: 884px;
+            &_articulo1{
+                // width: 320px;
+                // height: 300px;
+                position: relative;
+
+                h3{
+                font-size: 18px;
+                font-family: $suecalab;
+                font-style: normal;
+                font-weight:lighter;
+                letter-spacing: -0.2px;
+                margin: -4px 10px 4px;
+                }
+                p{
+                    margin: 0px 10px 4px;
+                }
+            }
+            
+
+            .separadorHorizontal{
+                width: 320px;
+            }
+        }
+    
+    }
+}
+
+@include tablet{
+    .cuerpo{
+        margin-left: 0.8rem;
+    }
+}
+
+@include mobile{
+    .cuerpo{
+        margin-left: 0rem;
+    }
+}
